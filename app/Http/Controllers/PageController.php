@@ -5,72 +5,52 @@ namespace App\Http\Controllers;
 class PageController extends Controller
 {
     /**
-     * Display icons page
+     * Display products page
      *
      * @return \Illuminate\View\View
      */
-    public function icons()
+    public function products()
     {
-        return view('pages.icons');
+        return view('pages.products');
     }
 
     /**
-     * Display maps page
+     * Display orders page
      *
      * @return \Illuminate\View\View
      */
-    public function maps()
+    public function orders()
     {
-        return view('pages.maps');
+        return view('pages.orders');
     }
 
     /**
-     * Display tables page
+     * Display transactions page
      *
      * @return \Illuminate\View\View
      */
-    public function tables()
+    public function transactions()
     {
-        return view('pages.tables');
+        return view('pages.transactions');
     }
 
     /**
-     * Display notifications page
+     * Display customers page
      *
      * @return \Illuminate\View\View
      */
-    public function notifications()
+    public function customers()
     {
-        return view('pages.notifications');
+        return view('pages.customers');
     }
 
     /**
-     * Display rtl page
+     * Display reports page
      *
      * @return \Illuminate\View\View
      */
-    public function rtl()
+    public function reports()
     {
-        return view('pages.rtl');
-    }
-
-    /**
-     * Display typography page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function typography()
-    {
-        return view('pages.typography');
-    }
-
-    /**
-     * Display upgrade page
-     *
-     * @return \Illuminate\View\View
-     */
-    public function upgrade()
-    {
-        return view('pages.upgrade');
+        return view('pages.reports');
     }
 }
