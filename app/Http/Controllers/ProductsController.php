@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
 
 class ProductsController extends Controller
 {
@@ -34,7 +35,19 @@ class ProductsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        // validate Product
+        $this->validate($request, [
+            'productName'=>'required',
+            'price'=>'required'
+        ]);
+
+        // add product
+        $product = new Product;
+        $product->productName = ucwords($request->input('productName'));
+        $product->price = $request->input('price');
+        $product->save();
+
+        return redirect('/products')->with('success','Product Added!');
     }
 
     /**

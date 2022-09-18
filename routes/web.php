@@ -32,6 +32,7 @@ Route::group(['middleware' => 'auth'], function () {
 		Route::get('transactions', ['as' => 'pages.transactions', 'uses' => 'App\Http\Controllers\PageController@transactions']);
 		Route::get('reports', ['as' => 'pages.reports', 'uses' => 'App\Http\Controllers\PageController@reports']);
 		Route::get('upgrade', ['as' => 'pages.upgrade', 'uses' => 'App\Http\Controllers\PageController@upgrade']);
+		Route::post('products', ['as' => 'products.store', 'uses'=>'App\Http\Controllers\ProductsController@store']);
 });
 
 Route::group(['middleware' => 'auth'], function () {

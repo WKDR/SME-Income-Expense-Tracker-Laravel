@@ -201,6 +201,7 @@
                 });
             });
         </script>
+        @include('includes.messages')
         @stack('js')
     </body>
 </html>
